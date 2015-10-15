@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# Startup script for VolumioDisplay
+#
+# Purpose: create a continuous log capturing debug and error messages
+#          2 versions exist - one that is forked and one for execute from an init.d script (held in /usr/local/bin)
+#          assume that this runs as root and sudo not needed
+#
+# v0.1 baloothebear4
+#
+LOGPATH=/var/log/VolumioDisplay
+LOGFILE=$LOGPATH/vd.log
+SRCPATH=/home/volumio/VolumioDisplay/volumiodisplay   #  if the programme is installed this wont be necesary
+# put in a test to make the directory if if doesnt exist
+sudo echo "    " &>>$LOGFILE
+sudo chmod +rwx $LOGPATH
+echo "Starting VolumioDisplay on "$(date) &>>$LOGFILE
+cd $SRCPATH
+python volumiodisplay.py &>> $LOGFILE

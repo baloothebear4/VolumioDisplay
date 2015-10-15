@@ -1,0 +1,160 @@
+<!--  Title:  Display setup screen for VolumioDisplay-->
+
+<div class="container">
+	<h1>Display Options</h1>
+	<form class="form-horizontal" method="post">
+		<fieldset>
+			<legend>Screen Choices</legend>
+<div>
+		$_system_select[volumiodisplay]
+</div>
+<!--			<p>Display is capable of displaying multiple screens in rotation, plus a screensaver when idle.</p> -->
+
+<!--  bitrate Screen -->
+			<div class="control-group">
+				<label class="control-label">Bitrate screen</label>
+					<div class="controls">
+				  	<div class="toggle">
+
+							<label class="toggle-radio" for="togglebitratescreen2" >ON</label>
+
+		$_system_select[bitratescreen1]
+
+			      	<label class="toggle-radio" for="togglebitratescreen1">OFF</label>
+
+		$_system_select[bitratescreen0]
+
+					</div>
+		$_system_select[bitratescreen2]
+				</div>
+			</div>
+
+<!--  Tracks Screen -->
+			<div class="control-group">
+				<label class="control-label">Tracks screen</label>
+				<div class="controls">
+	  			<div class="toggle">
+						<label class="toggle-radio" for="toggletracksscreen2" >ON</label>
+
+		$_system_select[tracksscreen1]
+
+      	  	<label class="toggle-radio" for="toggletracksscreen1">OFF</label>
+
+		$_system_select[tracksscreen0]
+					</div>
+    $_system_select[tracksscreen2]
+				</div>
+			</div>
+
+<!--  Volumio Screen -->
+			<div class="control-group">
+				<label class="control-label">Volumio screen</label>
+				<div class="controls">
+					<div class="toggle">
+						<label class="toggle-radio" for="togglevolumioscreen2" >ON</label>
+
+		$_system_select[volumioscreen1]
+
+						<label class="toggle-radio" for="togglevolumioscreen1">OFF</label>
+
+		$_system_select[volumioscreen0]
+					</div>
+    $_system_select[volumioscreen2]
+				</div>
+			</div>
+
+<!--  System Screen -->
+			<div class="control-group">
+				<label class="control-label">System screen</label>
+				<div class="controls">
+					<div class="toggle">
+						<label class="toggle-radio" for="togglesystemscreen2" >ON</label>
+
+			$_system_select[systemscreen1]
+
+						<label class="toggle-radio" for="togglesystemscreen1">OFF</label>
+
+			$_system_select[systemscreen0]
+					</div>
+			$_system_select[systemscreen2]
+				</div>
+			</div>
+
+<!--  Visualiser Screen -->
+			<div class="control-group">
+				<label class="control-label">Visualiser screen</label>
+					<div class="controls">
+						<div class="toggle">
+						<label class="toggle-radio" for="togglevisualiserscreen2" >ON</label>
+
+			$_system_select[visualiserscreen1]
+
+						<label class="toggle-radio" for="togglevisualiserscreen1">OFF</label>
+
+			$_system_select[visualiserscreen0]
+
+						</div>
+	    $_system_select[visualiserscreen2]
+					</div>
+   		</div>
+
+<!--  Cover art Screen -->
+			<div class="control-group">
+				<label class="control-label">Cover art screen</label>
+					<div class="controls">
+						<div class="toggle">
+							<label class="toggle-radio" for="togglecoverartscreen2" >ON</label>
+
+						$_system_select[coverartscreen1]
+
+							<label class="toggle-radio" for="togglecoverartscreen1">OFF</label>
+
+						$_system_select[coverartscreen0]
+
+						</div>
+				    $_system_select[coverartscreen2]
+					</div>
+	 		</div>
+
+<!--  Screensaver Screen -->
+			<div class="control-group">
+				<label class="control-label">Screensaver enable</label>
+					<div class="controls">
+						<div class="toggle">
+						<label class="toggle-radio" for="togglescreensaverscreen2" >ON</label>
+
+            $_system_select[screensaverscreen1]
+
+						<label class="toggle-radio" for="togglescreensaverscreen1">OFF</label>
+            $_system_select[screensaverscreen0]
+
+						</div>
+				    $_system_select[screensaverscreen2]
+				 </div>
+			</div>
+
+<!-- Capture the screen display duration before rotating to next one -->
+			<div class="control-group" id="environment">
+				<div class="control-group">
+					<label class="control-label" for="hostname">Screen duration</label>
+
+						<div class="controls">
+								<input class="input-large" class="input-large" type="text" id="screenduration" name="screenduration" value="$_screenduration" data-trigger="change">
+								<span class="help-block">Duration in seconds (1-99) each screen is displayed before rotating to the next.</span>
+						</div>
+
+				</div>
+			</div>
+
+<!-- Display some debug info -->
+			<div>
+				$_system_select[debug]
+			</div>
+
+<!--  Apply button to commit the changes -->
+			<div class="form-actions">
+				<button class="btn btn-primary btn-large" value="apply" name="apply" type="submit">Apply screen settings</button>
+			</div>
+		</fieldset>
+	</form>
+</div>
